@@ -105,6 +105,11 @@ class Config(object):
 
 # ----------------------- DATASETS ----------------------- #
 
+cityscap_dataset = dataset_base.copy({
+    'name': 'CityScape Custom Dataset',
+    'train_info':
+})
+
 dataset_base = Config({
     'name': 'Base Dataset',
 
