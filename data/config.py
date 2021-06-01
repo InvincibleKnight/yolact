@@ -105,9 +105,27 @@ class Config(object):
 
 # ----------------------- DATASETS ----------------------- #
 
-cityscap_dataset = dataset_base.copy({
+cityscapes_dataset = dataset_base.copy({
     'name': 'CityScape Custom Dataset',
-    'train_info':
+    'train_info': '/content/gdrive/MyDrive/instancesonly_filtered_gtFine_train.json',
+    'train_images': '/content/gdrive/MyDrive/Internship/gtFine/train/',
+    'valid_info': '/content/gdrive/MyDrive/instancesonly_filtered_gtFine_val.json',
+    'valid_images': '/content/gdrive/MyDrive/Internship/gtFine/val/',
+    'class_names':('person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
+                'train', 'truck', 'boat', 'traffic light', 'fire hydrant',
+                'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog',
+                'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe',
+                'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee',
+                'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat',
+                'baseball glove', 'skateboard', 'surfboard', 'tennis racket',
+                'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl',
+                'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot',
+                'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch',
+                'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop',
+                'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven',
+                'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase',
+                'scissors', 'teddy bear', 'hair drier', 'toothbrush'),
+    'label_map': {1: 1}
 })
 
 dataset_base = Config({
@@ -770,6 +788,15 @@ yolact_resnet50_pascal_config = yolact_resnet50_config.copy({
         'pred_scales': [[32], [64], [128], [256], [512]],
         'use_square_anchors': False,
     })
+})
+
+yolact_resnet50_cityscapes_config=yolact_resnet50_config.copy({
+    'name' : 'yolact_plus_resnet50_config_cityscapes',
+
+    'dataset': cityscapes_dataset,
+    'num_classes': len(cityscapes_dataset.class_names) + 1,
+
+    'max_size' : 2048,
 })
 
 # ----------------------- YOLACT++ CONFIGS ----------------------- #
