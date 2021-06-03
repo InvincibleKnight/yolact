@@ -177,7 +177,7 @@ cityscapes_dataset = dataset_base.copy({
     'name': 'CityScape Custom Dataset',
     'train_info': '/content/gdrive/MyDrive/Dataset/annotations/annotate/instancesonly_filtered_gtFine_train.json' ,
     'train_images': '/content/gdrive/MyDrive/Dataset/',
-    'valid_info': ',/content/gdrive/MyDrive/instancesonly_filtered_gtFine_val.json',
+    'valid_info': '/content/gdrive/MyDrive/instancesonly_filtered_gtFine_val.json',
     'valid_images': '/content/gdrive/MyDrive/Dataset/',
     'class_names':('person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
                 'train', 'truck', 'boat', 'traffic light', 'fire hydrant',
