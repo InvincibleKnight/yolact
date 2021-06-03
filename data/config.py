@@ -175,10 +175,10 @@ pascal_sbd_dataset = dataset_base.copy({
 
 cityscapes_dataset = dataset_base.copy({
     'name': 'CityScape Custom Dataset',
-    'train_info': '/content/gdrive/MyDrive/instancesonly_filtered_gtFine_train.json',
-    'train_images': '/content/gdrive/MyDrive/Internship/gtFine/train/',
-    'valid_info': '/content/gdrive/MyDrive/instancesonly_filtered_gtFine_val.json',
-    'valid_images': '/content/gdrive/MyDrive/Internship/gtFine/val/',
+    'train_info': '/content/gdrive/MyDrive/Dataset/annotations/annotate/instancesonly_filtered_gtFine_train.json' ,
+    'train_images': '/content/gdrive/MyDrive/Dataset/',
+    'valid_info': ',/content/gdrive/MyDrive/instancesonly_filtered_gtFine_val.json',
+    'valid_images': '/content/gdrive/MyDrive/Dataset/',
     'class_names':('person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
                 'train', 'truck', 'boat', 'traffic light', 'fire hydrant',
                 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog',
@@ -193,7 +193,7 @@ cityscapes_dataset = dataset_base.copy({
                 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven',
                 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase',
                 'scissors', 'teddy bear', 'hair drier', 'toothbrush'),
-    'label_map': {1: 1}
+    'label_map': {1: 8}
 })
 
 
