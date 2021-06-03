@@ -193,7 +193,7 @@ cityscapes_dataset = dataset_base.copy({
                 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven',
                 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase',
                 'scissors', 'teddy bear', 'hair drier', 'toothbrush'),
-    'label_map': {1: 8}
+    'label_map': COCO_LABEL_MAP
 })
 
 
