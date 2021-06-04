@@ -158,3 +158,6 @@ vid/
 vidres/
 
 _.py
+
+# Error files ignore
+errors/
