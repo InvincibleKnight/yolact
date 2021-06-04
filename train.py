@@ -267,10 +267,10 @@ def train():
             if (epoch+1)*epoch_size < iteration:
                 continue
             
-#            for datum in data_loader:
-#                # Stop if we've reached an epoch if we're resuming from start_iter
-#                if iteration == (epoch+1)*epoch_size:
-#                    break
+            for datum in data_loader:
+                # Stop if we've reached an epoch if we're resuming from start_iter
+                if iteration == (epoch+1)*epoch_size:
+                    break
 
                 # Stop at the configured number of iterations even if mid-epoch
                 if iteration == cfg.max_iter:
